@@ -59,7 +59,8 @@ body {
 }
 
 .about-me {
-  padding: 1rem;
+  padding: 8rem 1.5rem;
+  padding-bottom: 0;
   h1 {
     @include section-heading();
   }
@@ -83,7 +84,8 @@ body {
 }
 
 .tools {
-  padding: 1rem;
+  padding: 0 1.5rem;
+  padding-top: 8rem;
   text-align: center;
 
   h1 {
@@ -93,6 +95,7 @@ body {
     display: flex;
     font-size: 5rem;
     flex-direction: column;
+    padding-top: 2rem;
 
     i {
       margin: 1rem 0;
@@ -101,7 +104,9 @@ body {
 }
 
 .portfolio {
-  padding: 1rem;
+  padding: 0 1.5rem;
+  padding-top: 8rem;
+
   text-align: center;
 
   h1 {
@@ -113,6 +118,7 @@ body {
     justify-self: center;
 
     .project {
+      margin: 2rem 0;
       h2 {
         @include section-heading();
         font-size: 1.2rem;
@@ -149,6 +155,7 @@ img {
   color: #264de4;
 }
 
+// IPAD SIZE
 @media (min-width: 768px) {
   .showcase {
     .showcase-container {
@@ -166,7 +173,22 @@ img {
     }
   }
 
+  .about-me {
+    h1 {
+      font-size: 2.3rem;
+    }
+    .about-me__container {
+      p {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
   .tools {
+    h1 {
+      font-size: 2.3rem;
+    }
+
     .tools__container {
       display: flex;
       flex-direction: row;
@@ -174,25 +196,60 @@ img {
       font-size: 5rem;
 
       i {
-        margin: 1rem 0;
+        font-size: 5rem;
+        margin: 3rem 0;
+      }
+    }
+  }
+
+  .portfolio {
+    h1 {
+      font-size: 2.3rem;
+    }
+
+    .portfolio__container {
+      .project {
+        h2 {
+          font-size: 1.8rem;
+          letter-spacing: 0;
+        }
       }
     }
   }
 }
 
+// DESKTOP
 @media (min-width: 1000px) {
   .about-me {
     .about-me__container {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      grid-gap: 2rem;
+      grid-gap: 5rem;
 
       img {
         justify-self: end;
       }
 
       p {
-        text-align: left;
+        width: 50%;
+      }
+    }
+  }
+
+  .tools {
+    h1 {
+      font-size: 2.3rem;
+    }
+
+    .tools__container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      font-size: 5rem;
+
+      i {
+        font-size: 7rem;
+        margin: 3rem 0;
       }
     }
   }

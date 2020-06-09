@@ -58,7 +58,8 @@ body {
 }
 
 .about-me {
-  padding: 1rem;
+  padding: 8rem 1.5rem;
+  padding-bottom: 0;
 }
 
 .about-me h1 {
@@ -94,7 +95,8 @@ body {
 }
 
 .tools {
-  padding: 1rem;
+  padding: 0 1.5rem;
+  padding-top: 8rem;
   text-align: center;
 }
 
@@ -114,6 +116,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-top: 2rem;
 }
 
 .tools .tools__container i {
@@ -121,7 +124,8 @@ body {
 }
 
 .portfolio {
-  padding: 1rem;
+  padding: 0 1.5rem;
+  padding-top: 8rem;
   text-align: center;
 }
 
@@ -141,6 +145,10 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   justify-self: center;
+}
+
+.portfolio .portfolio__container .project {
+  margin: 2rem 0;
 }
 
 .portfolio .portfolio__container .project h2 {
@@ -191,6 +199,15 @@ img {
     color: #fff;
     font-size: 3rem;
   }
+  .about-me h1 {
+    font-size: 2.3rem;
+  }
+  .about-me .about-me__container p {
+    font-size: 1.2rem;
+  }
+  .tools h1 {
+    font-size: 2.3rem;
+  }
   .tools .tools__container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -205,7 +222,15 @@ img {
     font-size: 5rem;
   }
   .tools .tools__container i {
-    margin: 1rem 0;
+    font-size: 5rem;
+    margin: 3rem 0;
+  }
+  .portfolio h1 {
+    font-size: 2.3rem;
+  }
+  .portfolio .portfolio__container .project h2 {
+    font-size: 1.8rem;
+    letter-spacing: 0;
   }
 }
 
@@ -215,14 +240,34 @@ img {
     display: grid;
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
-    grid-gap: 2rem;
+    grid-gap: 5rem;
   }
   .about-me .about-me__container img {
     -ms-grid-column-align: end;
         justify-self: end;
   }
   .about-me .about-me__container p {
-    text-align: left;
+    width: 50%;
+  }
+  .tools h1 {
+    font-size: 2.3rem;
+  }
+  .tools .tools__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    font-size: 5rem;
+  }
+  .tools .tools__container i {
+    font-size: 7rem;
+    margin: 3rem 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
