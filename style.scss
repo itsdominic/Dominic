@@ -10,6 +10,13 @@ $colors: (
   text-align: center;
 }
 
+@mixin line-default {
+  border: solid map-get($colors, main) 0.8px;
+  width: 60%;
+  margin: auto;
+  align-content: center;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -52,6 +59,14 @@ body {
     color: map-get($colors, seconday);
     font-size: 2rem;
 
+    a {
+      color: map-get($colors, seconday);
+
+      &:hover {
+        color: map-get($colors, main);
+      }
+    }
+
     i {
       margin: 1rem 1rem;
     }
@@ -61,6 +76,11 @@ body {
 .about-me {
   padding: 8rem 1.5rem;
   padding-bottom: 0;
+
+  .line {
+    @include line-default();
+  }
+
   h1 {
     @include section-heading();
   }
@@ -69,6 +89,7 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding-top: 2rem;
 
     p {
       width: 80%;
@@ -85,8 +106,12 @@ body {
 
 .tools {
   padding: 0 1.5rem;
-  padding-top: 8rem;
+  padding-top: 4rem;
   text-align: center;
+
+  .line {
+    @include line-default();
+  }
 
   h1 {
     @include section-heading();
@@ -98,16 +123,19 @@ body {
     padding-top: 2rem;
 
     i {
-      margin: 1rem 0;
+      margin: 2rem 0;
     }
   }
 }
 
 .portfolio {
   padding: 0 1.5rem;
-  padding-top: 8rem;
-
+  padding-top: 4rem;
   text-align: center;
+
+  .line {
+    @include line-default();
+  }
 
   h1 {
     @include section-heading();
@@ -116,15 +144,50 @@ body {
     display: flex;
     flex-direction: column;
     justify-self: center;
+    margin-bottom: 2rem;
+    padding-top: 2rem;
 
     .project {
-      margin: 2rem 0;
+      margin: 1.5rem 0;
       h2 {
         @include section-heading();
         font-size: 1.2rem;
         letter-spacing: 0;
       }
+      button {
+        font-size: 1rem;
+        margin: 0 0.6rem;
+        margin-top: 1rem;
+        padding: 0.8rem;
+        border: none;
+        border-radius: 1rem;
+        background-color: map-get($colors, main);
+        a {
+          color: map-get($colors, seconday);
+          text-decoration: none;
+        }
+      }
     }
+  }
+}
+
+footer {
+  background-color: #363636;
+  color: black;
+  text-align: center;
+  width: 100%;
+  padding: 1rem;
+
+  p {
+    padding: 1rem;
+    font-size: 1rem;
+    color: map-get($colors, seconday);
+  }
+
+  i {
+    color: map-get($colors, seconday);
+    font-size: 2rem;
+    margin: 0 2rem;
   }
 }
 
@@ -219,7 +282,7 @@ img {
 }
 
 // DESKTOP
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   .about-me {
     .about-me__container {
       display: grid;
@@ -231,7 +294,7 @@ img {
       }
 
       p {
-        width: 50%;
+        width: 60%;
       }
     }
   }
@@ -248,9 +311,21 @@ img {
       font-size: 5rem;
 
       i {
-        font-size: 7rem;
         margin: 3rem 0;
       }
+    }
+  }
+}
+
+@media (min-width: 1100px) {
+  .portfolio {
+    h1 {
+      font-size: 2.3rem;
+    }
+
+    .portfolio__container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 }

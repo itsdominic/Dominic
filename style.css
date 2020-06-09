@@ -53,6 +53,14 @@ body {
   font-size: 2rem;
 }
 
+.showcase .showcase-icons a {
+  color: #fff;
+}
+
+.showcase .showcase-icons a:hover {
+  color: #5af;
+}
+
 .showcase .showcase-icons i {
   margin: 1rem 1rem;
 }
@@ -60,6 +68,14 @@ body {
 .about-me {
   padding: 8rem 1.5rem;
   padding-bottom: 0;
+}
+
+.about-me .line {
+  border: solid #5af 0.8px;
+  width: 60%;
+  margin: auto;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .about-me h1 {
@@ -81,6 +97,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  padding-top: 2rem;
 }
 
 .about-me .about-me__container p {
@@ -96,8 +113,16 @@ body {
 
 .tools {
   padding: 0 1.5rem;
-  padding-top: 8rem;
+  padding-top: 4rem;
   text-align: center;
+}
+
+.tools .line {
+  border: solid #5af 0.8px;
+  width: 60%;
+  margin: auto;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .tools h1 {
@@ -120,13 +145,21 @@ body {
 }
 
 .tools .tools__container i {
-  margin: 1rem 0;
+  margin: 2rem 0;
 }
 
 .portfolio {
   padding: 0 1.5rem;
-  padding-top: 8rem;
+  padding-top: 4rem;
   text-align: center;
+}
+
+.portfolio .line {
+  border: solid #5af 0.8px;
+  width: 60%;
+  margin: auto;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .portfolio h1 {
@@ -145,10 +178,12 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   justify-self: center;
+  margin-bottom: 2rem;
+  padding-top: 2rem;
 }
 
 .portfolio .portfolio__container .project {
-  margin: 2rem 0;
+  margin: 1.5rem 0;
 }
 
 .portfolio .portfolio__container .project h2 {
@@ -158,6 +193,41 @@ body {
   text-align: center;
   font-size: 1.2rem;
   letter-spacing: 0;
+}
+
+.portfolio .portfolio__container .project button {
+  font-size: 1rem;
+  margin: 0 0.6rem;
+  margin-top: 1rem;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: #5af;
+}
+
+.portfolio .portfolio__container .project button a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer {
+  background-color: #363636;
+  color: black;
+  text-align: center;
+  width: 100%;
+  padding: 1rem;
+}
+
+footer p {
+  padding: 1rem;
+  font-size: 1rem;
+  color: #fff;
+}
+
+footer i {
+  color: #fff;
+  font-size: 2rem;
+  margin: 0 2rem;
 }
 
 img {
@@ -234,7 +304,7 @@ img {
   }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   .about-me .about-me__container {
     display: -ms-grid;
     display: grid;
@@ -247,7 +317,7 @@ img {
         justify-self: end;
   }
   .about-me .about-me__container p {
-    width: 50%;
+    width: 60%;
   }
   .tools h1 {
     font-size: 2.3rem;
@@ -266,8 +336,19 @@ img {
     font-size: 5rem;
   }
   .tools .tools__container i {
-    font-size: 7rem;
     margin: 3rem 0;
+  }
+}
+
+@media (min-width: 1100px) {
+  .portfolio h1 {
+    font-size: 2.3rem;
+  }
+  .portfolio .portfolio__container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
   }
 }
 /*# sourceMappingURL=style.css.map */
