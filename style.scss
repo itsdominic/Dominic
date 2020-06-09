@@ -17,6 +17,10 @@ $colors: (
   align-content: center;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -84,7 +88,7 @@ body {
     }
 
     a {
-      font-size: 2.5rem;
+      font-size: 2rem;
       color: map-get($colors, seconday);
 
       &:hover {
@@ -172,7 +176,7 @@ body {
       margin: 1.5rem 0;
       h2 {
         @include section-heading();
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         letter-spacing: 0;
       }
       button {
