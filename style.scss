@@ -128,9 +128,10 @@ body {
 
     h1 {
       margin: 0;
-      letter-spacing: 1.2rem;
+      letter-spacing: 0.8rem;
+      font-size: 3rem;
       color: map-get($colors, seconday);
-      line-height: 2.2;
+      line-height: 1.8;
       text-transform: uppercase;
       font-weight: lighter;
       padding: 0 1rem;
@@ -143,12 +144,13 @@ body {
 
     h3 {
       margin: 0;
-      letter-spacing: 1.2rem;
+      letter-spacing: 0.4rem;
       color: map-get($colors, main);
       line-height: 2.2;
       text-transform: uppercase;
       font-weight: lighter;
       padding: 0 1rem;
+      margin-top: 1rem;
       animation: moveInRight 2.5s ease-out;
     }
   }
@@ -156,8 +158,9 @@ body {
 
 .showcase-icons {
   color: map-get($colors, seconday);
-  font-size: 2rem;
+  font-size: 3.2rem;
   animation: moveInBottom 3s;
+  margin-top: 1.5rem;
 
   a {
     color: map-get($colors, seconday);
