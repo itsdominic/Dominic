@@ -701,10 +701,9 @@ img {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    font-size: 5rem;
   }
   .tools .tools__container i {
-    font-size: 6.5rem;
+    font-size: 5.5rem;
     margin: 3rem 0;
   }
   .portfolio h1 {
