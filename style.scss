@@ -287,6 +287,8 @@ body {
       background-color: map-get($colors, main);
       animation: shake 3s;
       animation-iteration-count: infinite;
+      position: absolute;
+      z-index: -10;
 
       &:hover {
         transform: scale(1.2);
@@ -295,6 +297,39 @@ body {
       a {
         color: map-get($colors, seconday);
         text-decoration: none;
+      }
+    }
+  }
+}
+
+nav {
+  background-color: map-get($colors, main);
+  color: white;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  left: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.8rem;
+
+  ul {
+    margin: 0;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+
+    a {
+      text-decoration: none;
+      color: white;
+
+      li {
+        margin: 0 1rem;
+
+        &:hover {
+          color: black;
+          font-weight: 900;
+        }
       }
     }
   }

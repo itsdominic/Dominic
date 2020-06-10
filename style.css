@@ -460,6 +460,8 @@ body {
           animation: shake 3s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
+  position: absolute;
+  z-index: -10;
 }
 
 .about-me .about-me__container button:hover {
@@ -470,6 +472,44 @@ body {
 .about-me .about-me__container button a {
   color: #fff;
   text-decoration: none;
+}
+
+nav {
+  background-color: #5af;
+  color: white;
+  position: -webkit-sticky;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  left: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.8rem;
+}
+
+nav ul {
+  margin: 0;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+}
+
+nav ul a {
+  text-decoration: none;
+  color: white;
+}
+
+nav ul a li {
+  margin: 0 1rem;
+}
+
+nav ul a li:hover {
+  color: black;
+  font-weight: 900;
 }
 
 .tools {
