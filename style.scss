@@ -17,6 +17,50 @@ $colors: (
   align-content: center;
 }
 
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+
+  80% {
+    transform: translateX(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+
+  80% {
+    transform: translateX(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -43,7 +87,21 @@ body {
     justify-content: center;
     text-align: center;
 
-    h1,
+    h1 {
+      margin: 0;
+      letter-spacing: 1.2rem;
+      color: map-get($colors, seconday);
+      line-height: 2.2;
+      text-transform: uppercase;
+      font-weight: lighter;
+      padding: 0 1rem;
+      animation: moveInLeft 2s ease-out;
+
+      .blue {
+        color: map-get($colors, main);
+      }
+    }
+
     h3 {
       margin: 0;
       letter-spacing: 1.2rem;
@@ -52,6 +110,7 @@ body {
       text-transform: uppercase;
       font-weight: lighter;
       padding: 0 1rem;
+      animation: moveInRight 2s ease-out;
 
       .blue {
         color: map-get($colors, main);
@@ -62,6 +121,8 @@ body {
   .showcase-icons {
     color: map-get($colors, seconday);
     font-size: 2rem;
+    animation: moveInBottom 1s ease-out 0.3s;
+    animation-fill-mode: backwards;
 
     a {
       color: map-get($colors, seconday);
@@ -82,6 +143,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.8rem;
     margin-top: 10rem;
+    animation: moveInBottom 1s ease-out 0.3s;
 
     h4 {
       margin: 0.5rem 0;
@@ -95,6 +157,19 @@ body {
         color: map-get($colors, main);
       }
     }
+  }
+}
+
+.main-nav {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  background-color: grey;
+  margin: 0;
+  padding: 1rem;
+  color: white;
+  .main-nav__item {
+    margin: 0 1rem;
   }
 }
 
