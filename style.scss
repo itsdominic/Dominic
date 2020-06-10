@@ -287,8 +287,6 @@ body {
       background-color: map-get($colors, main);
       animation: shake 3s;
       animation-iteration-count: infinite;
-      position: absolute;
-      z-index: -10;
 
       &:hover {
         transform: scale(1.2);
@@ -312,6 +310,7 @@ nav {
   text-transform: uppercase;
   letter-spacing: 0.8rem;
   display: none;
+  z-index: 10;
 
   ul {
     margin: 0;
