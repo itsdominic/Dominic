@@ -484,6 +484,7 @@ nav {
   left: 0;
   text-transform: uppercase;
   letter-spacing: 0.8rem;
+  display: none;
 }
 
 nav ul {
@@ -712,6 +713,9 @@ img {
   .portfolio .portfolio__container .project h2 {
     font-size: 1.8rem;
     letter-spacing: 0;
+  }
+  nav {
+    display: block;
   }
 }
 

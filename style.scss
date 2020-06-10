@@ -311,6 +311,7 @@ nav {
   left: 0;
   text-transform: uppercase;
   letter-spacing: 0.8rem;
+  display: none;
 
   ul {
     margin: 0;
@@ -520,6 +521,10 @@ img {
         }
       }
     }
+  }
+
+  nav {
+    display: block;
   }
 }
 
