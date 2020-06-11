@@ -321,8 +321,8 @@ body {
   text-transform: uppercase;
   font-weight: lighter;
   padding: 0 1rem;
-  -webkit-animation: moveInLeft 2.5s ease-out;
-          animation: moveInLeft 2.5s ease-out;
+  -webkit-animation: moveInLeft 1.5s ease-out;
+          animation: moveInLeft 1.5s ease-out;
 }
 
 .showcase .showcase-container h1 .blue {
@@ -338,15 +338,15 @@ body {
   font-weight: lighter;
   padding: 0 1rem;
   margin-top: 1rem;
-  -webkit-animation: moveInRight 2.5s ease-out;
-          animation: moveInRight 2.5s ease-out;
+  -webkit-animation: moveInRight 1.5s ease-out;
+          animation: moveInRight 1.5s ease-out;
 }
 
 .showcase-icons {
   color: #fff;
   font-size: 3.2rem;
-  -webkit-animation: moveInBottom 3s;
-          animation: moveInBottom 3s;
+  -webkit-animation: moveInBottom 2s;
+          animation: moveInBottom 2s;
   margin-top: 1.5rem;
 }
 
@@ -375,8 +375,8 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.5rem;
   margin-top: 10rem;
-  -webkit-animation: moveInBottomIcons 3s;
-          animation: moveInBottomIcons 3s;
+  -webkit-animation: moveInBottomIcons 2s;
+          animation: moveInBottomIcons 2s;
 }
 
 .showcase__container-button h4 {
@@ -393,10 +393,10 @@ body {
 }
 
 .showcase__container-button a i {
-  -webkit-animation: bounce 2s;
-          animation: bounce 2s;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
+  -webkit-animation: bounce 1.5s;
+          animation: bounce 1.5s;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
 }
@@ -456,8 +456,8 @@ body {
   border: none;
   border-radius: 1rem;
   background-color: #5af;
-  -webkit-animation: shake 3s;
-          animation: shake 3s;
+  -webkit-animation: shake 2s;
+          animation: shake 2s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
 }
@@ -537,10 +537,9 @@ nav ul a li:hover {
   display: -ms-grid;
   display: grid;
   margin-top: 3rem;
-  background-color: rgba(155, 146, 146, 0.151);
   border-radius: 2rem;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
   font-size: 5rem;
 }
 
@@ -690,16 +689,11 @@ img {
     font-size: 2.3rem;
   }
   .tools .tools__container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .tools .tools__container i {
     font-size: 5.5rem;
