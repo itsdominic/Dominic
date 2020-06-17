@@ -17,6 +17,13 @@ $colors: (
   align-content: center;
 }
 
+%headings {
+  text-transform: uppercase;
+  font-weight: lighter;
+  margin: 0;
+  padding: 0 1rem;
+}
+
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -166,15 +173,13 @@ body {
     text-align: center;
 
     h1 {
-      margin: 0;
+      @extend %headings;
       letter-spacing: 0.8rem;
       font-size: 3rem;
       color: map-get($colors, seconday);
       line-height: 1.8;
-      text-transform: uppercase;
-      font-weight: lighter;
-      padding: 0 1rem;
-      animation: moveInLeft 1.5s ease-out;
+
+      animation: moveInLeft 1.5s ease-in;
 
       .blue {
         color: map-get($colors, main);
@@ -182,13 +187,11 @@ body {
     }
 
     h3 {
-      margin: 0;
-      letter-spacing: 0.4rem;
+      @extend %headings;
+      letter-spacing: 0.3rem;
       color: map-get($colors, main);
       line-height: 2.2;
-      text-transform: uppercase;
-      font-weight: lighter;
-      padding: 0 1rem;
+
       margin-top: 1rem;
       animation: moveInRight 1.5s ease-out;
     }
@@ -569,7 +572,6 @@ img {
 
     .portfolio__container {
       display: grid;
-      grid-gap: 2rem;
       grid-template-columns: repeat(2, 1fr);
     }
   }
